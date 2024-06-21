@@ -3,14 +3,14 @@
 
 
 <h2>Description</h2> 
-In this walkthrough/lab given scanrio was I was to assist the incident response team by providing threat intellehgence 
+In this walkthrough/lab scenario, I was tasked with assisting the incident response team by providing threat intelligence on a suspicious executable file on a workstation. For this lab, I was only given the SHA-256 hash of the binary. Using the hash, I began my investigation on VirusTotal, where it was evident that the binary was malware, specifically tagged as a trojan and RedLine stealer. Knowing the type of malware present on the machine, it was important to determine its DNS resolutions and IP traffic. I discovered that the malware primarily communicates with the IP address 77[.]91[.]124[.]55. Further investigation into this IP on VirusTotal revealed that it had been tagged multiple times as malicious, with community notes confirming it was seen as a command and control server for RedLine malware. Digging deeper into the malicious IP, I searched for it on AbuseIPDB and found that it is hosted by YeezyHost, a web hosting server located in Finland. With this information, the SOC team can determine if the hosting provider should be blocked altogether to enhance security against further attacks. Lastly, during the investigation, I discovered that the malware imports ADVAPI.dll, which upon further examination, is used to access registry keys and security calls, likely establishing persistence. I provided the MITRE ATT&CK technique of T1005 to assist incident responders in their report.
 <br />
 
 
-<h2>Languages and Utilities Used</h2>
+<h2>Utilities Used</h2>
 
 - <b>Virus Total</b> 
-- <b>WhoisLookup</b>
+- <b>AbuseIPDB</b>
 - <b>MalwareBazaar</b>
 - <b>Threat Fox</b>
 <h2>Environments Used </h2>
