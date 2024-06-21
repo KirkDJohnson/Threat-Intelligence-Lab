@@ -31,12 +31,12 @@ I begun my investigation by uploading the hash to VirusTotal where it was confir
 <img src="https://github.com/KirkDJohnson/Threat-Intelligence-Lab/assets/164972007/785218c2-6f50-45dc-bb0b-2192ba64e69a" height="100%" width="100%" alt="Threat Intelligence Lab"/>
 <br />
 <br />
-Finding out when the malware was first seen and common names it is known as is important becasue it can change the response process if it was newly reported malware or known as a previously known malware, the eradication techniques can be significantly different.<br/>
+Finding out when the malware was first seen and common names it is known as is important becasue it can change the response process if it was newly reported malware within a couple months alluding to the possibility of not all IOCs known or as a previously known malware where its removal process is clear. The eradication techniques can be significantly different.<br/>
 <img src="https://github.com/KirkDJohnson/Threat-Intelligence-Lab/assets/164972007/784ff0bf-c774-4b38-a39b-648de900552a" height="100%" width="100%" alt="Threat Intelligence Lab"/>
 <img src="https://github.com/KirkDJohnson/Threat-Intelligence-Lab/assets/164972007/e5f31f92-7bba-4695-8df7-413faca53986" height="100%" width="100%" alt="Threat Intelligence Lab"/>
 <br />
 <br />
-I then determined if any, what dns resolutions the stealer makes when running, and suprisingly, the one clear website was facebook.com confirmed both on Viruus Total and Joe Security Sandbox report.<br/>
+I then determined if any, what DNS resolutions the stealer makes when running, and suprisingly, the one clear website was facebook.com confirmed both on Viruus Total and Joe Security Sandbox report.<br/>
 <img src="https://github.com/KirkDJohnson/Threat-Intelligence-Lab/assets/164972007/8769c507-49a4-46b6-8649-6cd558797ab8" height="100%" width="100%" alt="Threat Intelligence Lab"/>
 <img src="https://github.com/KirkDJohnson/Threat-Intelligence-Lab/assets/164972007/63001dc3-5721-45f4-869f-cf4aa94e7604" height="100%" width="100%" alt="Threat Intelligence Lab"/>
 <br />
@@ -44,15 +44,15 @@ I then determined if any, what dns resolutions the stealer makes when running, a
 The next piece of information is crucial, determining what IP addresses if any the malware calls back to. I discovered it to connect to 77[.]91[.]124[.]55 on the ephemeral port 19071. The IP address after further investigation was tagged as malicioius and directly as a Redline Command and Control server. <br/>
 <img src="https://github.com/KirkDJohnson/Threat-Intelligence-Lab/assets/164972007/968a4f97-9f01-4581-9e90-7bb56b866113" height="100%" width="100%" alt="Threat Intelligence Lab"/>
 <img src="https://github.com/KirkDJohnson/Threat-Intelligence-Lab/assets/164972007/5bbb24fe-762e-43c7-b5c6-878a1382d712" height="100%" width="100%" alt="Threat Intelligence Lab"/>
-<img src="https://github.com/KirkDJohnson/Threat-Intelligence-Lab/assets/164972007/b7f3feeb-eeb1-4b02-ae1f-2ce95768e361" height="100%" width="100%" alt="Threat Intelligence Lab"/>
+<img src="https://github.com/KirkDJohnson/Threat-Intelligence-Lab/assets/164972007/43253fa1-b584-4e8c-b1f1-d6eae616c01a" height="100%" width="100%" alt="Threat Intelligence Lab"/>
 <br />
 <br />
-If a particular hosting service is often utilized for malicious activities, the SOC team can block or restrict all traffic to and from the IP addresses associated with that hosting provider,, so I it was important to identify the hosting service of the malicious IP that the malware created the Command and Control server with. The host of the malicious IP in this case was yeezy host.<br/>
-<img src="https://github.com/KirkDJohnson/Threat-Intelligence-Lab/assets/164972007/31aeb3a8-75d6-48ac-84bd-bb42077a13e3" height="100%" width="100%" alt="Threat Intelligence Lab"/>
+If a particular hosting service is often utilized for malicious activities, the SOC team can block or restrict all traffic to and from the IP addresses associated with that hosting provider. Any intelligence on the command and control server can assist the incident reponders and other defenders. The host of the malicious IP in this case was yeezy host.<br/>
+<img src="https://github.com/KirkDJohnson/Threat-Intelligence-Lab/assets/164972007/5b379b0c-5ce1-4327-9977-1405312a75e7" height="100%" width="100%" alt="Threat Intelligence Lab"/>
 <img src="https://github.com/KirkDJohnson/Threat-Intelligence-Lab/assets/164972007/13c6a755-4010-49b6-865c-8e1991f6f0cf" height="100%" width="100%" alt="Threat Intelligence Lab"/>
 <br />
 <br />
-WIthin scope of threat inteligence, I was able to discover the imported .dll (dynamic link library) the binary used for privilege escalation. Within Virus Total the malware was seen importing ADVAPI32.dll, and upon further research of the dll, it is used to change registry kesty and security settings within windows environments.<br/>
+Within scope of threat intelligence, I was able to discover the imported .dll (dynamic link library) the binary used for privilege escalation. Within Virus Total the malware was seen importing ADVAPI32.dll, and upon further research of the dll, it is used to change registry keys and security settings within windows environments.<br/>
 <img src="https://github.com/KirkDJohnson/Threat-Intelligence-Lab/assets/164972007/cce35934-4c32-40fb-b9bc-bda15eac9d7d" height="100%" width="100%" alt="Threat Intelligence Lab"/>
 <img src="https://github.com/KirkDJohnson/Threat-Intelligence-Lab/assets/164972007/b15de092-7ac8-4e55-a0fc-01b6a0daf308" height="100%" width="100%" alt="Threat Intelligence Lab"/>
 <br />
